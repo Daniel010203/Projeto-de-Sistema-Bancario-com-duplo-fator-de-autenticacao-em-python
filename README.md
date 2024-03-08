@@ -38,3 +38,38 @@ Este projeto pode beneficiar as organizações de diversas maneiras:
 - **Redução de Riscos Financeiros**: Ao proteger as transações financeiras dos clientes contra fraudes e ataques cibernéticos, as organizações podem reduzir os riscos financeiros associados a perdas de dados ou violações de segurança.
 
 Este projeto de sistema bancário com duplo fator de autenticação em Python oferece uma solução robusta e segura para organizações que desejam garantir a segurança e confiabilidade de suas operações financeiras nos dias atuais.
+
+Este código implementa um sistema bancário básico em Python, com funcionalidades como criação de contas, realização de transações (saques e depósitos), registro de histórico de transações e autenticação de duplo fator para clientes.
+
+
+Aqui está uma explicação das principais funcionalidades do código:
+
+1. **Cliente**:
+   - A classe `Cliente` representa um cliente do banco. Ela possui métodos para adicionar contas, realizar transações e autenticar com duplo fator.
+   - O método `adicionar_duplo_fator` permite que um cliente adicione informações de duplo fator, como e-mail e número de telefone, vinculados ao seu CPF.
+   - O método `autenticar_duplo_fator` verifica se as informações de duplo fator fornecidas pelo cliente correspondem às informações registradas para aquele CPF.
+
+2. **PessoaFisica**:
+   - A classe `PessoaFisica` herda da classe `Cliente` e representa um cliente pessoa física do banco. Ela inclui atributos como nome, data de nascimento e CPF.
+
+3. **Conta**:
+   - A classe `Conta` representa uma conta bancária. Ela possui métodos para sacar e depositar dinheiro, bem como propriedades para acessar o saldo, número da conta, agência, cliente associado e histórico de transações.
+
+4. **ContaCorrente**:
+   - A classe `ContaCorrente` herda da classe `Conta` e representa uma conta corrente. Ela inclui recursos específicos de uma conta corrente, como limite de saque e número máximo de saques permitidos.
+
+5. **Historico**:
+   - A classe `Historico` é responsável por armazenar o histórico de transações de uma conta.
+
+6. **Transacao**:
+   - A classe abstrata `Transacao` define uma transação genérica. Ela possui métodos abstratos para registrar uma transação em uma conta.
+
+7. **Saque** e **Deposito**:
+   - As classes `Saque` e `Deposito` implementam transações específicas de saque e depósito. Elas registram suas transações no histórico de uma conta após serem realizadas com sucesso.
+
+8. **autenticar_com_duplo_fator**:
+   - Esta função verifica a autenticação de duplo fator para um cliente específico, comparando as informações fornecidas (CPF, e-mail e telefone) com as informações registradas.
+
+No exemplo de uso fornecido no final do código, um cliente é criado e adicionado ao sistema bancário, informações de duplo fator são registradas para esse cliente e a função `autenticar_com_duplo_fator` é chamada para autenticar o cliente com base nas informações fornecidas.
+
+Além disso, a função `autenticar_com_duplo_fator` emite uma mensagem no sistema operacional usando a biblioteca `pyautogui` para confirmar que o acesso foi autorizado após a autenticação de duplo fator ser bem-sucedida.
