@@ -1,5 +1,3 @@
-Para criar um README explicando as funcionalidades do código e como ele pode contribuir para as organizações nos dias atuais, você pode seguir um formato semelhante ao exemplo abaixo:
-
 # Projeto de Sistema Bancário com Duplo Fator de Autenticação em Python
 
 Este é um projeto de sistema bancário desenvolvido em Python, que inclui um algoritmo de duplo fator de autenticação para garantir a segurança das transações financeiras dos clientes. O código completo pode ser encontrado [aqui](https://github.com/Daniel010203/Projeto-de-Sistema-Bancario-com-duplo-fator-de-autenticacao-em-python/tree/a40611d6509335f06ef77923ee5a6f07f0203d54).
